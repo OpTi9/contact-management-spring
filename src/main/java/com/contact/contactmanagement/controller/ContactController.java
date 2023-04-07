@@ -1,15 +1,24 @@
 package com.contact.contactmanagement.controller;
 
 import com.contact.contactmanagement.domain.Contact;
+import com.contact.contactmanagement.domain.User;
 import com.contact.contactmanagement.service.ContactService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import com.contact.contactmanagement.repository.UserRepository;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Controller
 @RequestMapping("/contacts")
 public class ContactController {
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
+    @Autowired
+    private UserRepository userRepository;
 
     @Autowired
     private ContactService contactService;
@@ -56,9 +65,20 @@ public class ContactController {
         contactService.deleteById(id);
         return "redirect:/contacts";
     }
-    // Show the login page
-    @GetMapping("/login")
-    public String showLoginPage() {
-        return "login";
+
+    // Show the registration page
+    @GetMapping("/register")
+    public String showRegisterPage(Model model) {
+        model.addAttribute("user", new User());
+        return "contacts/register";
     }
+
+    // Save the new user
+    @PostMapping("/register")
+    public String registerUser(@ModelAttribute User user) {
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        userRepository.save(user);
+        return "redirect:/contacts/login";
+    }
+
 }

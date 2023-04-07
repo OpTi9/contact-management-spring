@@ -5,7 +5,7 @@
 </head>
 <body>
 <h1>Login</h1>
-<form action="#" th:action="@{/login}" method="post">
+<form action="#" th:action="@{/contacts/login}" method="post">
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" required />
     <br/>
@@ -15,5 +15,7 @@
     <button type="submit">Login</button>
 </form>
 <a href="/contacts">Back to Contact List</a>
+<br/>
+<a href="/contacts/register">Register a new account</a>
 </body>
 </html>

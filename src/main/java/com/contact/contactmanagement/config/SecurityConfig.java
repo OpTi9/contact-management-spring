@@ -33,10 +33,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                 .antMatchers("/contacts/new", "/contacts/{id}/edit", "/contacts/{id}/delete").authenticated()
+                .antMatchers("/register").permitAll()
                 .anyRequest().permitAll()
                 .and()
                 .formLogin()
-                .loginPage("/login")
+                .loginPage("/contacts/login")
                 .permitAll()
                 .and()
                 .logout()
