@@ -5,7 +5,7 @@
 </head>
 <body>
 <h1>Edit Contact</h1>
-<form action="#" th:action="@{/contacts/edit/{id}(id=${contact.id})}" th:object="${contact}" method="post">
+<form th:action="@{/contacts/{id}/edit(id=${contact.id})}" th:object="${contact}" method="post">
     <input type="hidden" th:field="*{id}" />
     <label for="name">Name:</label>
     <input type="text" id="name" th:field="*{name}" />
