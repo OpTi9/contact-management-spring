@@ -56,4 +56,9 @@ public class ContactController {
         contactService.deleteById(id);
         return "redirect:/contacts";
     }
+    // Show the login page
+    @GetMapping("/login")
+    public String showLoginPage() {
+        return "login";
+    }
 }
