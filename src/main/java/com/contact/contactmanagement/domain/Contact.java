@@ -8,11 +8,11 @@ import java.util.Set;
 public class Contact {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
 
-    @OneToMany(mappedBy = "contact", cascade = CascadeType.ALL)
+    @ManyToMany(mappedBy = "contacts")
     private Set<Address> addresses = new HashSet<>();
 
     @OneToMany(mappedBy = "contact", cascade = CascadeType.ALL)
