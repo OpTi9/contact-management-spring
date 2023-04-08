@@ -1,14 +1,14 @@
 # contact-management-spring
-contact management project built using Spring Boot.
+Contact management project built using Spring Boot.
 
-Une application de gestion de contacts qui permet de :
-a. Lister les contacts de votre base de données.
-b. Ajouter un nouveau contact
-c. Modifier un contact
-d. Supprimer un contact
+A contact management application that allows you to:
+a. List the contacts in your database.
+b. Add a new contact
+c. Edit a contact
+d. Delete a contact
 
-1. La base de données pour l’authentification.
-2. Une API qui permet d’interroger le serveur afin d’obtenir des réponses au format XML. Par exemple :
-- En entrant http://localhost:8080/xml?action=listContacts, on obtient une réponse au format XML contenant la liste des contacts.
-- En entrant http://localhost:8080/xml?action=getContact&id=42, on obtient une réponse au format XML contenant le contact avec id=42.
-- En entrant http://localhost:8080/xml?action=delContact&id=42, on supprime le contact avec id=42.
+1. The database for authentication.
+2. An API that allows you to query the server to obtain responses in XML format. For example:
+- By entering http://localhost:8080/xml?action=listContacts, we get a response in XML format containing the list of contacts.
+- Entering http://localhost:8080/xml?action=getContact&id=42, we obtain a response in XML format containing the contact with id=42.
+- Enter http://localhost:8080/xml?action=delContact&id=42 to delete the contact with id=42.
