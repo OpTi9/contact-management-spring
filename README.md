@@ -1,7 +1,6 @@
-# contact-management-spring
-Contact management project built using Spring Boot.
+# Contact management project built using Spring Boot.
 
-Description
+## Description
 
 A contact management application that allows you to:
 - List the contacts in your database.
@@ -9,7 +8,7 @@ A contact management application that allows you to:
 - Edit a contact
 - Delete a contact
 
-Features:
+## Features:
 
 1. The database for authentication.
 2. An API that allows you to query the server to obtain responses in XML format. For example:
