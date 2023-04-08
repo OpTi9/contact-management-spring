@@ -2,10 +2,10 @@
 Contact management project built using Spring Boot.
 
 A contact management application that allows you to:
-a. List the contacts in your database.
-b. Add a new contact
-c. Edit a contact
-d. Delete a contact
+- List the contacts in your database.
+- Add a new contact
+- Edit a contact
+- Delete a contact
 
 1. The database for authentication.
 2. An API that allows you to query the server to obtain responses in XML format. For example:
