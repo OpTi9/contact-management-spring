@@ -33,4 +33,9 @@ public class ContactService {
     public void deleteById(Long id) {
         contactRepository.deleteById(id);
     }
+
+    // Check if a contact exists by ID
+    public boolean existsById(Long id) {
+        return contactRepository.existsById(id);
+    }
 }
